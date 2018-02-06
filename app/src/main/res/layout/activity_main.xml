@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.rosberry.view60fps.MainActivity">
+
+    <com.rosberry.view60fps.view.SquareFrameLayout
+        android:id="@+id/viewContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <SeekBar
+        android:id="@+id/seekbarSceneModel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewContainer"
+        android:max="100"
+
+        />
+
+    <RadioGroup
+        android:id="@+id/radio_group_views"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seekbarSceneModel"
+        >
+
+        <RadioButton
+            android:id="@+id/viewCanvas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/simple_view"
+            />
+
+        <RadioButton
+            android:id="@+id/surfaceViewCanvas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/surface_view"
+            />
+
+        <RadioButton
+            android:id="@+id/textureViewCanvas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/texture_view"
+            />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/seekbarSceneModel"
+        android:orientation="vertical"
+        >
+
+        <CheckBox
+            android:id="@+id/checkbox_ha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="10dp"
+            android:checked="true"
+            android:text="Hardware Acceleration"
+            />
+
+        <CheckBox
+            android:id="@+id/checkbox_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/seekbarSceneModel"
+            android:layout_marginTop="10dp"
+            android:checked="true"
+            android:text="Sress mode"
+            />
+    </LinearLayout>
+
+</RelativeLayout>
